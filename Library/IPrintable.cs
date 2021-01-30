@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    interface IStorage
+    interface IPrintable
     {
         int Width { get; }
         int Height { get; }

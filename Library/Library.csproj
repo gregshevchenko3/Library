@@ -101,17 +101,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Author.cs" />
-    <Compile Include="Book.cs" />
+    <Compile Include="Book.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Document.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PaperStandards.cs" />
     <Compile Include="StorageReader.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="INumered.cs" />
-    <Compile Include="IStorage.cs" />
-    <Compile Include="Page.cs" />
-    <Compile Include="PaperStandards.cs" />
+    <Compile Include="IPrintable.cs" />
+    <Compile Include="PageContent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Publisher.cs" />
-    <Compile Include="StorageInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

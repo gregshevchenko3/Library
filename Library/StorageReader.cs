@@ -41,13 +41,16 @@ namespace Library
         public async void read_line()
         {
             string line = await _reader.ReadLineAsync();
+            int line_no = 0;
+            eventHandler(this, new NextLineReadArgs { Line = line });
             while (!_reader.EndOfStream)
             {
-                if (line == null) break;
-                eventHandler(this, new NextLineReadArgs { Line = line });
                 line = await _reader.ReadLineAsync();
-                
+                if (line == null) break;
+               // Console.WriteLine(line_no++);
+                eventHandler(this, new NextLineReadArgs { Line = line });
             }
+            _reader.Close();
         }
     }
 }
